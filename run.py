@@ -63,6 +63,17 @@ def top_movies():
                   'skull island','jon wick-2','spiderman-homecoming']
     return render_template('movies.html',movies= movie_list,name='Harry')
 
+# jinja-2 Template
+@app.route('/tables')
+def movies_plus():
+    movie_dict = {'autopsy of jane doe':2.14,
+                  'neon demon':3.20,
+                  'ghost in a shell':9.01,
+                  'skull island':6.78,
+                  'jon wick-2':1.21,
+                  'spiderman-homecoming':4.56}
+    return render_template('table_data.html',movies= movie_dict,name='Sally')
+
 
 
 if __name__ == '__main__':
