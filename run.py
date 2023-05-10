@@ -25,5 +25,31 @@ def no_query_strings(name = 'Anupam'):
     # query_val = request.args.get('greeting',greeting)
     return f"<h1>Hello there !: {name} </h1>"
 
+# strings 
+#http://127.0.0.1:5000/number/arsh
+@app.route('/text/<string:name>')
+def working_with_string(name):
+    return f"<h1>Hello there !: {name} </h1>"
+
+# numbers 
+#http://127.0.0.1:5000/number/1
+@app.route('/number/<int:num>')
+def working_with_numbers(num):
+    print(type(num))
+    return f"<h1>Hello there !: {num} </h1>"
+
+# numbers 
+#http://127.0.0.1:5000/add/78/25
+@app.route('/add/<int:num1>/<int:num2>')
+def adding_integers(num1,num2):
+    return f"<h1>Hello there !: { num1 + num2} </h1>"
+
+# floats 
+#http://127.0.0.1:5000/product/78/25
+@app.route('/product/<float:num1>/<float:num2>')
+def multiply_float(num1,num2):
+    return f"<h1>Hello there !: { num1 * num2} </h1>"
+
+
 if __name__ == '__main__':
     app.run(debug=True)
