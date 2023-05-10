@@ -22,3 +22,14 @@
 # not cached or bookmarked
 # change the state of the server - can post , delete, update data 
 
+# Routing 
+# www.abc.com/?greeting=hello -part after / is called a query string-GET parameters
+# get parameters can be included in url as above 
+# its in form of key value pair - key = greetings , value = hello
+# Request object 
+# 1. context variable 
+# 2. holds the GET request details
+# 3. python dectionary wit key-value pair
+
+# strings_ numbers and float
+
