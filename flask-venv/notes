@@ -35,4 +35,12 @@
 # Anything captured in query string or URL as argument is by default a string unless we specify another type of data 
 
 
+# Render HTML Pages
+# from flask import render_template
+# flask automatically looks for HTML files in folder called templates - Default behavior 
+# render_template takes 2 arguments. 1. HTML file to be rendered 2 . we can pass any no of variables 
+# e.g = render_template = ("hello.html",name="mina",age = 25.....)
+
+
+
 

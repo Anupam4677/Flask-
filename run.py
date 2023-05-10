@@ -1,5 +1,5 @@
 from flask import Flask, request
-
+from flask import render_template
 app = Flask(__name__)
 
 @app.route("/index")
@@ -45,10 +45,16 @@ def adding_integers(num1,num2):
     return f"<h1>Hello there !: { num1 + num2} </h1>"
 
 # floats 
-#http://127.0.0.1:5000/product/78/25
+#http://127.0.0.1:5000/product/78.1/22.1
 @app.route('/product/<float:num1>/<float:num2>')
 def multiply_float(num1,num2):
     return f"<h1>Hello there !: { num1 * num2} </h1>"
+
+# Using Template 
+@app.route('/temp')
+def using_template():
+    print('a')
+    return render_template('hello.html')
 
 
 if __name__ == '__main__':
