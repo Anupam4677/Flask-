@@ -56,6 +56,14 @@ def using_template():
     print('a')
     return render_template('hello.html')
 
+# jinja Template
+@app.route('/watch')
+def top_movies():
+    movie_list = ['autopsy of jane doe','neon demon','ghost in a shell',
+                  'skull island','jon wick-2','spiderman-homecoming']
+    return render_template('movies.html',movies= movie_list,name='Harry')
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
