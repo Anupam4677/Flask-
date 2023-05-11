@@ -3,10 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>Movie Durations</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/styles.css')}}">
     </head>
 
     <body>
         <h2>This collection belongs to {{ name }}</h2>
+        <h3>path to css file: {{ url_for('static',filename='css/styles.css')}}</h3>
         <table>
             <tr>
                 <th>Movie</th>
