@@ -74,6 +74,28 @@ def movies_plus():
                   'spiderman-homecoming':4.56}
     return render_template('table_data.html',movies= movie_dict,name='Sally')
 
+# jinja-2 Template
+# @app.route('/filters')
+# def filter_data():
+#     movie_dict = {'autopsy of jane doe':2.14,
+#                   'neon demon':3.20,
+#                   'ghost in a shell':9.01,
+#                   'skull island':6.78,
+#                   'jon wick-2':1.21,
+#                   'spiderman-homecoming':4.56}
+#     return render_template('table_data.html',movies= movie_dict,name='Sally')
+
+# jinja filters
+@app.route('/filters')
+def filter_data():
+    movie_dict = {'autopsy of jane doe':2.14,
+                  'neon demon':3.20,
+                  'ghost in a shell':9.01,
+                  'skull island':6.78,
+                  'jon wick-2':1.21,
+                  'spiderman-homecoming':4.56}
+    return render_template('filter_data.html',movies= movie_dict,name=None,film='a chrismas carol')
+
 
 
 if __name__ == '__main__':
