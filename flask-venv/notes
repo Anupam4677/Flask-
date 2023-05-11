@@ -41,8 +41,10 @@
 # render_template takes 2 arguments. 1. HTML file to be rendered 2 . we can pass any no of variables 
 # e.g = render_template = ("hello.html",name="mina",age = 25.....)
 
-# url_for
-# 
+# Database
+# Arsh@4677 - postgreSQL Master password
+# pip install Flask-SQLAlchemy==2.2
+# pip install psycopg2  
 
 
 
